@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",                       // Use ESModules
+    "moduleResolution": "bundler",             // Resolve modules like Node.js
+    "esModuleInterop": true,                // Ensures ESModule compatibility
+    "strict": true,                         // Enable strict type checking options
+    "skipLibCheck": true,                   // Skip type checking of all declaration files
+    "forceConsistentCasingInFileNames": true, // Ensure consistent file naming
+    "isolatedModules": true,                // Required for transpiling each module separately
+    "resolveJsonModule": true,              // Allow importing JSON files
+    "sourceMap": true,                       // Generate sourcemap files
+    "jsx": "react-jsx",  
+    "lib": ["ESNext", "dom"],
+    "declaration": true,                     // Generate declaration files
+    "emitDeclarationOnly": false ,
+    "rootDir": "./src",
+    "outDir": "./dist"
+  },
+  "include": ["src/**/*.ts", "src/app/App.tsx", "src/context/NotificationProvider.tsx"],
+  "exclude": ["**/*.test.ts", "**/*.test.tsx"],
+}
