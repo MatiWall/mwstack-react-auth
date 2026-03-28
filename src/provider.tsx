@@ -57,15 +57,15 @@ type AuthProviderProps = {children: React.ReactNode}
 
 const AuthProvider: React.FC<AuthProviderProps> = ({children}) => {
 
+    const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+    const [user, setUser] = useState<User | null>(null);
+
     useEffect(() => {
     const token = retrieveToken();
     if (token) {
         loginUser(token);
     }
 }, []);
-
-    const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
-    const [user, setUser] = useState<User | null>(null);
 
 
     let history = useNavigate();
